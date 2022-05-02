@@ -30,6 +30,7 @@ repositories {
     maven { url jenkinsPipelineRepo('xtext-lib','autodetect') }
   } else {
     mavenLocal()
+    maven { url "$JENKINS_URL/job/lsp4j/$MVN_REPOPATH" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
   }
 }
